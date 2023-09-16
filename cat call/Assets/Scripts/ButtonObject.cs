@@ -14,7 +14,7 @@ public class ButtonObject : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    public Color unpressedColor = Color.red;
+     Color unpressedColor = Color.red;
     public Color pressedColor = Color.green;
 
 
@@ -22,7 +22,7 @@ public class ButtonObject : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = unpressedColor;
+        unpressedColor = spriteRenderer.color;
     }
 
     // on trigger enter 2d
