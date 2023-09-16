@@ -8,6 +8,8 @@ public class SceneController : MonoBehaviour
     public GoalPost[] goalPosts;
     // make this instance
     public static SceneController instance;
+    public float restartDelay = 1f;
+    public float nextLevelDelay = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,10 @@ public class SceneController : MonoBehaviour
         // fade to next scene
         LevelTransition.instance.FadeToLevel();
 
-        LoadNextScene();
+
+        // load next scene
+        StartCoroutine(LoadNextSceneCoroutine());
+       
 
     }
 
@@ -53,6 +58,16 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
 
 
+    }
+
+
+    // ienumerator for loading next scene
+    IEnumerator LoadNextSceneCoroutine()
+    {
+        // wait for next level delay
+        yield return new WaitForSeconds(nextLevelDelay);
+        // load next scene
+        LoadNextScene();
     }
 
     public void LoadNextScene()
