@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 983e75c99a2e1c541aa9c741c3de4770
   - enabled: 1
-    path: Assets/EliasScene/TestScene.unity
-    guid: 2aa0bb09f894eb94ebe27ebca5605bfa
-  - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 239551be4f5f0884a9c0018155aa8783
   m_configObjects: {}

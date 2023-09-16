@@ -16,6 +16,11 @@ public class ButtonObject : MonoBehaviour
 
 
     public int weight = 0;
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color = unpressedColor;
+    }
 
     // on trigger enter 2d
     private void OnTriggerEnter2D(Collider2D other)
