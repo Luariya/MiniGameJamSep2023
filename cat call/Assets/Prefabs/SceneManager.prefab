@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3788083624855264362}
   - component: {fileID: 4977839776109202233}
   - component: {fileID: 5375112255802888839}
-  - component: {fileID: 5309808688108582080}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -50,7 +49,6 @@ MonoBehaviour:
   goalPosts: []
   restartDelay: 1
   nextLevelDelay: 1
-  audioClipWin: {fileID: 0}
 --- !u!114 &4977839776109202233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,22 +157,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5309808688108582080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3444049911805866810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24cfc6215b6e834a96838ca2a56e1c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catSounds:
-  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
-  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
-  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
-  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
-  minTime: 40
-  maxTime: 45

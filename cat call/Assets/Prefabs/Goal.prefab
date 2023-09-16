@@ -5038,7 +5038,6 @@ MonoBehaviour:
   goalPostSpriteActivated: {fileID: 21300160, guid: 29c9cded5e558164aaf8c9bf08aa1510,
     type: 3}
   colorActivated: {r: 1, g: 1, b: 1, a: 1}
-  goalSound: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
-  goalSoundDeactivated: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f,
-    type: 3}
+  goalSound: {fileID: 0}
+  goalSoundDeactivated: {fileID: 0}
   particleSystemObject: {fileID: 7473813151593267229}

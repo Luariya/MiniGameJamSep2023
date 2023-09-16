@@ -6,10 +6,6 @@ namespace Cainos.PixelArtTopDown_Basic
 {
     public class TopDownCharacterController : MonoBehaviour
     {
-        public AudioClip[] walkSounds;
-        public float walkSoundInterval = 0.5f;
-        float lastWalkSoundTime = -40f;
-
         public float speed;
 
         private Animator animator;
@@ -50,13 +46,6 @@ namespace Cainos.PixelArtTopDown_Basic
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
             //transform.position += (Vector3)dir * speed * Time.deltaTime;
-
-
-            if (dir.magnitude > 0 && Time.time > lastWalkSoundTime + walkSoundInterval)
-            {
-                lastWalkSoundTime = Time.time;
-                AudioBox.instance.PlayClip(walkSounds[Random.Range(0, walkSounds.Length)]);
-            }
         }
     }
 }
