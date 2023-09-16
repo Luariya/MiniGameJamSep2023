@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-
+    public GameObject Menü;
+    public GameObject LevelSelect;
 
     public void QuitButton()
     {
-       
+        
         Debug.Log("Quit");
         Application.Quit();
 
@@ -22,10 +23,18 @@ public class MenuScript : MonoBehaviour
 
     }
 
-    public void LevelButton()
+    public void LevelScreen()
+    {
+       
+        LevelSelect.SetActive(true);
+        Menü.SetActive(false);
+
+    }
+    public void MenüScreen()
     {
 
-        SceneManager.LoadScene("LevelSelect");
+        LevelSelect.SetActive(false);
+        Menü.SetActive(true);
 
     }
 }
