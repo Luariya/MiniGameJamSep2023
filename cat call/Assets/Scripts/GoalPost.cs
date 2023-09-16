@@ -10,6 +10,9 @@ public class GoalPost : MonoBehaviour
      Sprite goalPostSpriteDeactivated;
     public Sprite goalPostSpriteActivated;
 
+     Color colorDeactivated;
+    public Color colorActivated;
+
     // ontrigger enter 2d
 
 
@@ -17,6 +20,8 @@ public class GoalPost : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         goalPostSpriteDeactivated = spriteRenderer.sprite;
+        colorDeactivated = spriteRenderer.color;
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +30,7 @@ public class GoalPost : MonoBehaviour
         // set is activated to true
         catInGoal = true;
         spriteRenderer.sprite = goalPostSpriteActivated;
+        spriteRenderer.color = colorActivated;
         // check if goal
         SceneController.instance.CheckIfGoal();
 
@@ -37,6 +43,7 @@ public class GoalPost : MonoBehaviour
 
         // set is activated to false
         spriteRenderer.sprite = goalPostSpriteDeactivated;
+        spriteRenderer.color = colorDeactivated;
         catInGoal = false;
 
     }

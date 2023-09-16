@@ -32,6 +32,10 @@ public class SceneController : MonoBehaviour
     public void Win()
     {
         Debug.Log("You win!");
+
+        // fade to next scene
+        LevelTransition.instance.FadeToLevel();
+
         LoadNextScene();
 
     }
