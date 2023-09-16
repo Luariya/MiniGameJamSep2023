@@ -26,7 +26,7 @@ public class GoalPost : MonoBehaviour
         catInGoal = true;
         spriteRenderer.sprite = goalPostSpriteActivated;
         // check if goal
-        SceneManager.instance.CheckIfGoal();
+        SceneController.instance.CheckIfGoal();
 
     }
 

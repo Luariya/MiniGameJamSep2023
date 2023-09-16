@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/EliasScene/TestScene.unity
+    guid: 2aa0bb09f894eb94ebe27ebca5605bfa
   m_configObjects: {}

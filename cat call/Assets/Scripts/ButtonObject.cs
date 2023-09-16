@@ -6,6 +6,7 @@ public class ButtonObject : MonoBehaviour
 {
 
     public bool isPressed = false;
+    public bool staysPressed = false;
     public ButtonConnection[] connections;
 
 
@@ -29,6 +30,9 @@ public class ButtonObject : MonoBehaviour
     // on trigger exit 2d
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("Trigger Exit");
+
+        if(staysPressed)return;
 
 
 
