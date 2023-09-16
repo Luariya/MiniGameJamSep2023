@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject Menü;
     public GameObject LevelSelect;
+    public GameObject Credits;
 
     public void QuitButton()
     {
@@ -35,6 +36,16 @@ public class MenuScript : MonoBehaviour
 
         LevelSelect.SetActive(false);
         Menü.SetActive(true);
+        Credits.SetActive(false);
+
+    }
+
+    public void CreditsScreen()
+    {
+
+    
+        Menü.SetActive(false);
+        Credits.SetActive(true);
 
     }
 }
