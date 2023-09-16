@@ -33,9 +33,14 @@ public class ButtonObject : MonoBehaviour
             weight++;
 
 
-        particleSystemObject.Play();
 
-        spriteRenderer.color = pressedColor;
+        if (weight ==1)
+        {
+            particleSystemObject.Play();
+            AudioBox.instance.PlayClip(buttonSound_pressed);
+            spriteRenderer.color = pressedColor;
+        }
+        
             isPressed = true;
             foreach (ButtonConnection connection in connections)
             {
@@ -43,7 +48,7 @@ public class ButtonObject : MonoBehaviour
             }
         
 
-            AudioBox.instance.PlayClip(buttonSound_pressed);
+            
     }
 
     // on trigger exit 2d
