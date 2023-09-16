@@ -171,3 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24cfc6215b6e834a96838ca2a56e1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catSounds:
+  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
+  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
+  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
+  - {fileID: 8300000, guid: db051965c98cf8748a4ae906f39435c2, type: 3}
+  minTime: 40
+  maxTime: 45

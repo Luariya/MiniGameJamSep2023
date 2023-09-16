@@ -133,6 +133,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd146093740c5d43b5909c7913f3109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSounds:
+  - {fileID: 8300000, guid: 4437bc80104f4f84a9149c54a918b984, type: 3}
+  - {fileID: 8300000, guid: 6cb3eace11794c84db4995aa0a617ad1, type: 3}
+  - {fileID: 8300000, guid: dc739d782ed6fe5439fb6de4a13f53bd, type: 3}
+  - {fileID: 8300000, guid: b224ea4077fd9804c825863a283d50a6, type: 3}
+  - {fileID: 8300000, guid: 07902d35c76dec04495ae89be0bca886, type: 3}
+  walkSoundInterval: 0.3
   speed: 3
 --- !u!212 &5628018141983903107
 SpriteRenderer:
