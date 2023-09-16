@@ -134,6 +134,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  footstepSounds:
+  - {fileID: 8300000, guid: 592e7903575792e48aed4b7e5b699e71, type: 3}
+  - {fileID: 8300000, guid: 4437bc80104f4f84a9149c54a918b984, type: 3}
+  - {fileID: 8300000, guid: 6cb3eace11794c84db4995aa0a617ad1, type: 3}
+  - {fileID: 8300000, guid: dc739d782ed6fe5439fb6de4a13f53bd, type: 3}
+  footstepInterval: 0.3
 --- !u!212 &5628018141983903107
 SpriteRenderer:
   m_ObjectHideFlags: 0

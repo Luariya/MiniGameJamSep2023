@@ -49,6 +49,7 @@ MonoBehaviour:
   goalPosts: []
   restartDelay: 1
   nextLevelDelay: 1
+  audioClipWin: {fileID: 8300000, guid: a0010a1a0c474473b81729eb770c485f, type: 3}
 --- !u!114 &4977839776109202233
 MonoBehaviour:
   m_ObjectHideFlags: 0
