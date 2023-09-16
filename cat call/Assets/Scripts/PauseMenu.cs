@@ -56,4 +56,16 @@ public class PauseMenu : MonoBehaviour
         Paused = true;
         // enable pause menu
     }
+
+
+    public void RestartLevel()
+    {
+        SceneController.instance.RestartScene();
+
+    }
+
+    public void ReturnToMainMenu()
+    {
+
+    }
 }

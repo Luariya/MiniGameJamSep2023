@@ -11,6 +11,8 @@ public class SceneController : MonoBehaviour
     public float restartDelay = 1f;
     public float nextLevelDelay = 1f;
 
+    public AudioClip audioClipWin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,12 +39,26 @@ public class SceneController : MonoBehaviour
 
         // fade to next scene
         LevelTransition.instance.FadeToLevel();
-
+        AudioBox.instance.PlayClip(audioClipWin);
 
         // load next scene
         StartCoroutine(LoadNextSceneCoroutine());
        
 
+    }
+
+    // ienumerator for restarting scene
+    IEnumerator RestartSceneCoroutine()
+    {
+        // wait for restart delay
+        yield return new WaitForSeconds(restartDelay);
+        // restart scene
+        
+        Scene currentScene = SceneManager.GetActiveScene();
+        // get current scene index
+        int currentSceneIndex = currentScene.buildIndex;
+        // load current scene
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
 
@@ -51,11 +67,8 @@ public class SceneController : MonoBehaviour
     public void RestartScene()
     {
         // get current scene
-        Scene currentScene = SceneManager.GetActiveScene();
-        // get current scene index
-        int currentSceneIndex = currentScene.buildIndex;
-        // load current scene
-        SceneManager.LoadScene(currentSceneIndex);
+        // start enumerator
+        StartCoroutine(RestartSceneCoroutine());
 
 
     }
@@ -64,10 +77,28 @@ public class SceneController : MonoBehaviour
     // ienumerator for loading next scene
     IEnumerator LoadNextSceneCoroutine()
     {
+
+        LevelTransition.instance.FadeToLevel();
         // wait for next level delay
         yield return new WaitForSeconds(nextLevelDelay);
         // load next scene
         LoadNextScene();
+    }
+
+    // enumerator for loading main menu
+    IEnumerator LoadMainMenuCoroutine()
+    {
+        LevelTransition.instance.FadeToLevel();
+        // wait for next level delay
+        yield return new WaitForSeconds(nextLevelDelay);
+        // load next scene
+        MainMenu();
+    }
+
+    public void MainMenu()
+    {
+        // load main menu
+        SceneManager.LoadScene(0);
     }
 
     public void LoadNextScene()

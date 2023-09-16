@@ -13,6 +13,12 @@ public class GoalPost : MonoBehaviour
      Color colorDeactivated;
     public Color colorActivated;
 
+    public AudioClip goalSound;
+    public AudioClip goalSoundDeactivated;
+
+    // particle system
+    public ParticleSystem particleSystemObject;
+
     // ontrigger enter 2d
 
 
@@ -33,6 +39,9 @@ public class GoalPost : MonoBehaviour
         spriteRenderer.color = colorActivated;
         // check if goal
         SceneController.instance.CheckIfGoal();
+        // play particle system
+        particleSystemObject.Play();
+        AudioBox.instance.PlayClip(goalSound);
 
     }
 
@@ -45,6 +54,7 @@ public class GoalPost : MonoBehaviour
         spriteRenderer.sprite = goalPostSpriteDeactivated;
         spriteRenderer.color = colorDeactivated;
         catInGoal = false;
+        AudioBox.instance.PlayClip(goalSoundDeactivated);
 
     }
 
