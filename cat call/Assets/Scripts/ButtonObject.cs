@@ -9,6 +9,11 @@ public class ButtonObject : MonoBehaviour
     public bool staysPressed = false;
     public ButtonConnection[] connections;
 
+    SpriteRenderer spriteRenderer;
+
+    public Color unpressedColor = Color.red;
+    public Color pressedColor = Color.green;
+
 
     public int weight = 0;
 
@@ -19,6 +24,7 @@ public class ButtonObject : MonoBehaviour
 
             weight++;
 
+        spriteRenderer.color = pressedColor;
             isPressed = true;
             foreach (ButtonConnection connection in connections)
             {
@@ -34,6 +40,7 @@ public class ButtonObject : MonoBehaviour
 
         if(staysPressed)return;
 
+        spriteRenderer.color = unpressedColor;
 
 
             weight--;
