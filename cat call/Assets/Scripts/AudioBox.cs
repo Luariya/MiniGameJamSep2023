@@ -18,12 +18,14 @@ public class AudioBox : MonoBehaviour
 
     public void PlayClip(AudioClip audioClip, float volume)
     {
+        if (audioClip == null) return;
         audioSource.PlayOneShot(audioClip, volume);
         
     }
 
     public void PlayClip(AudioClip audioClip)
     {
+        if (audioClip == null) return;
         audioSource.PlayOneShot(audioClip, 1f);
         
     }
