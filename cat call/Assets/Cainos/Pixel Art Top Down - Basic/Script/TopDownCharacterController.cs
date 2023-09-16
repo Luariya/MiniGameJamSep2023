@@ -10,6 +10,11 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private Animator animator;
 
+
+        public AudioClip[] footstepSounds;
+        public float footstepInterval = 0.5f;
+        float lastStepTime = 0;
+
         private void Start()
         {
             animator = GetComponent<Animator>();
@@ -46,6 +51,12 @@ namespace Cainos.PixelArtTopDown_Basic
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
             //transform.position += (Vector3)dir * speed * Time.deltaTime;
+
+            if (dir.magnitude > 0 && Time.time - lastStepTime > footstepInterval)
+            {
+                lastStepTime = Time.time;
+                AudioBox.instance.PlayClip(footstepSounds[Random.Range(0, footstepSounds.Length)]);
+            }
         }
     }
 }
