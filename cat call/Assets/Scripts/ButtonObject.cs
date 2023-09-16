@@ -8,6 +8,9 @@ public class ButtonObject : MonoBehaviour
     public bool isPressed = false;
     public bool staysPressed = false;
     public ButtonConnection[] connections;
+    public ParticleSystem particleSystemObject;
+    public AudioClip buttonSound_pressed;
+    public AudioClip buttonSound_released;
 
     SpriteRenderer spriteRenderer;
 
@@ -29,6 +32,9 @@ public class ButtonObject : MonoBehaviour
 
             weight++;
 
+
+        particleSystemObject.Play();
+
         spriteRenderer.color = pressedColor;
             isPressed = true;
             foreach (ButtonConnection connection in connections)
@@ -36,6 +42,8 @@ public class ButtonObject : MonoBehaviour
                 connection.Activate();
             }
         
+
+            AudioBox.instance.PlayClip(buttonSound_pressed);
     }
 
     // on trigger exit 2d
@@ -58,6 +66,8 @@ public class ButtonObject : MonoBehaviour
             {
                 connection.Deactivate();
             }
+
+            AudioBox.instance.PlayClip(buttonSound_released);
         
     }
 
