@@ -103,6 +103,8 @@ MonoBehaviour:
   staysPressed: 0
   connections:
   - {fileID: 0}
+  unpressedColor: {r: 1, g: 1, b: 1, a: 1}
+  pressedColor: {r: 0, g: 1, b: 0, a: 1}
   weight: 0
 --- !u!61 &7736751255238373251
 BoxCollider2D:
@@ -136,18 +138,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.25}
+  m_Offset: {x: 0.024035245, y: 0.58415663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.9375, y: 2.25}
+    oldSize: {x: 1.46875, y: 1.125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 2}
+  m_Size: {x: 1.1973569, y: 0.860595}
   m_EdgeRadius: 0
 --- !u!1 &3063740953892285415
 GameObject:
